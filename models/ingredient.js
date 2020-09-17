@@ -3,7 +3,13 @@ const Schema = mongoose.Schema;
 
 const ingredientsSchema = new Schema({
     name: {type: String, required: true},
-    dairy: {type: Boolean, default: false}
+    label: {
+        type: String, default: function () {
+            return this.name.charAt(0).toUpperCase() + this.name.slice(1);
+        }
+    },
+    dairy: {type: Boolean, default: false},
+    price: {type: Number, required: true}
 })
 
 

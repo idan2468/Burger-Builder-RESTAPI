@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const orderRouter = require('./routes/order');
+const ingredientRouter = require('./routes/ingredient');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use(orderRouter);
+app.use(ingredientRouter);
 
 app.use((err, req, res, next) => {
     console.log("Here")
