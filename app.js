@@ -1,3 +1,4 @@
+// Imports
 const express = require('express');
 const bodyParser = require('body-parser');
 const orderRouter = require('./routes/order');
@@ -9,14 +10,16 @@ const app = express();
 
 const MONGO_URI = "mongodb+srv://idan2468:0509496620@idans.xvear.mongodb.net/burger-builder?retryWrites=true&w=majority";
 
+// Configs middlewares
 app.use(cors());
 app.use(bodyParser.json());
 
+// Import Routes
 app.use(orderRouter);
 app.use(ingredientRouter);
 
+// Error Handler
 app.use((err, req, res, next) => {
-    console.log("Here")
     console.log(err)
     next();
 });
