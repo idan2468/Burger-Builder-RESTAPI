@@ -17,6 +17,9 @@ const orderSchema = new Schema({
             bacon: 0,
             meat: 0
         }
+    },
+    customer:{
+        type:Schema.Types.ObjectId, ref:'Customer'
     }
 }, {timestamps: true})
 
