@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const orderRouter = require('./routes/order');
 const ingredientRouter = require('./routes/ingredient');
+const customersRoutes = require('./routes/customer');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
@@ -17,11 +18,11 @@ app.use(bodyParser.json());
 // Import Routes
 app.use(orderRouter);
 app.use(ingredientRouter);
+app.use(customersRoutes);
 
 // Error Handler
 app.use((err, req, res, next) => {
     console.log(err)
-    // res.status(401).json(err);
     next();
 });
 
