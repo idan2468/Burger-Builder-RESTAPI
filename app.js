@@ -16,8 +16,8 @@ app.use(orderRouter);
 app.use(ingredientRouter);
 
 app.use((err, req, res, next) => {
-    console.log("Here")
     console.log(err)
+    // res.status(401).json(err);
     next();
 });
 
