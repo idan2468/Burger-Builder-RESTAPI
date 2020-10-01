@@ -1,4 +1,5 @@
 // Imports
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const orderRouter = require('./routes/order');
@@ -10,8 +11,7 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 4000
 
-const MONGO_URI = "mongodb+srv://idan2468:0509496620@idans.xvear.mongodb.net/burger-builder?retryWrites=true&w=majority";
-
+const MONGO_URI = process.env.MONGO_URI
 // Configs middlewares
 app.use(cors());
 app.use(bodyParser.json());

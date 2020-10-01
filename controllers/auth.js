@@ -1,8 +1,9 @@
 const User = new require('../models/user');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const SECRET = 'z8RDili^U2o2WO^RQ3GX';
+const SECRET = process.env.SECRET;
 exports.login = async (req, res, next) => {
+    console.log(SECRET);
     let username = req.body.username;
     let password = req.body.password;
     try {
