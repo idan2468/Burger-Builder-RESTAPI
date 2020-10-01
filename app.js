@@ -3,11 +3,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const orderRouter = require('./routes/order');
 const ingredientRouter = require('./routes/ingredient');
+const authRoutes = require('./routes/auth');
 const customersRoutes = require('./routes/customer');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
-
+const PORT = 4000
 
 const MONGO_URI = "mongodb+srv://idan2468:0509496620@idans.xvear.mongodb.net/burger-builder?retryWrites=true&w=majority";
 
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 app.use(orderRouter);
 app.use(ingredientRouter);
 app.use(customersRoutes);
+app.use(authRoutes);
 
 // Error Handler
 app.use((err, req, res, next) => {
@@ -28,6 +30,6 @@ app.use((err, req, res, next) => {
 
 mongoose.connect(MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     app.listen(4000, () => {
-        console.log('listening')
+        console.log(`listening to port ${PORT}`)
     })
 });
