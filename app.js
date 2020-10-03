@@ -1,4 +1,6 @@
 //todo: maybe save jwt in cookie instead of in the localstorage at the client.
+//todo: add jwt refresh token.
+
 // Imports
 require('dotenv').config();
 const express = require('express');
