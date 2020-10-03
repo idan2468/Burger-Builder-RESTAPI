@@ -18,8 +18,11 @@ const orderSchema = new Schema({
             meat: 0
         }
     },
-    customer:{
-        type:Schema.Types.ObjectId, ref:'customer'
+    customer: {
+        type: Schema.Types.ObjectId, ref: 'customer'
+    },
+    user: {
+        type: Schema.Types.ObjectId
     }
 }, {timestamps: true})
 
