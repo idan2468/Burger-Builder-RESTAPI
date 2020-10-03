@@ -1,3 +1,4 @@
+//todo: maybe save jwt in cookie instead of in the localstorage at the client.
 // Imports
 require('dotenv').config();
 const express = require('express');
@@ -6,6 +7,7 @@ const orderRouter = require('./routes/order');
 const ingredientRouter = require('./routes/ingredient');
 const authRoutes = require('./routes/auth');
 const customersRoutes = require('./routes/customer');
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
@@ -15,6 +17,7 @@ const MONGO_URI = process.env.MONGO_URI
 // Configs middlewares
 app.use(cors());
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 // Import Routes
 app.use(orderRouter);
