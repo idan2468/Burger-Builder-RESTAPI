@@ -4,7 +4,6 @@ const Customer = require('../models/customer')
 exports.getOrders = async (req, res, next) => {
     try {
         const orders = await Order.find().populate('customer');
-        console.log(orders);
         res.status(200).json(orders.map(order => order._doc));
     } catch (e) {
         throw new Error(e);
@@ -14,7 +13,6 @@ exports.getOrders = async (req, res, next) => {
 // PUT => /order
 
 exports.createOrder = async (req, res, next) => {
-    console.log('CreateOrder');
     const price = Number(req.body.price);
     const ingredients = req.body.ingredients;
     const customerDetails = req.body.customer;

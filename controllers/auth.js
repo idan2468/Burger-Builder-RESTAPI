@@ -1,9 +1,14 @@
 const User = new require('../models/user');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const SECRET = process.env.SECRET;
+const {validationResult} = require('express-validator')
+
+
 exports.login = async (req, res, next) => {
-    console.log(SECRET);
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({errors: errors.array()});
+    }
     let username = req.body.username;
     let password = req.body.password;
     try {
@@ -11,11 +16,10 @@ exports.login = async (req, res, next) => {
         if (user && await bcryptjs.compare(password, user.password)) {
             const token = jwt.sign(
                 {userId: user._id, email: user.email, isAdmin: user.isAdmin},
-                SECRET,
+                process.env.SECRET,
                 {expiresIn: '1h'});
-            return res.status(200).json({token: token})
-        }
-        else{
+            return res.status(200).json({token: token, expiresIn: 3.6e+6})
+        } else {
             res.status(401).json('Unauthorized');
         }
     } catch (e) {
@@ -24,6 +28,10 @@ exports.login = async (req, res, next) => {
     }
 }
 exports.register = async (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({errors: errors.array()});
+    }
     const username = req.body.username;
     const password = req.body.password;
     const email = req.body.email;
