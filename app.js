@@ -11,6 +11,7 @@ const authRoutes = require('./routes/auth');
 const customersRoutes = require('./routes/customer');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const setRequestVars = require('./middleware/setRequestVars');
 const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT
@@ -20,6 +21,7 @@ const MONGO_URI = process.env.MONGO_URI
 app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(setRequestVars);
 
 // Import Routes
 app.use(orderRouter);

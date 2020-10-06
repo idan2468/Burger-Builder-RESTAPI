@@ -20,6 +20,9 @@ const orderSchema = new Schema({
     },
     customer: {
         type: Schema.Types.ObjectId, ref: 'customer'
+    },
+    user: {
+        type: Schema.Types.ObjectId
     }
 }, {timestamps: true})
 
