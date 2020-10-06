@@ -1,5 +1,6 @@
 const Order = require('../models/order');
 const Customer = require('../models/customer')
+
 // GET => /orders
 exports.getOrders = async (req, res, next) => {
     try {
@@ -11,7 +12,6 @@ exports.getOrders = async (req, res, next) => {
 }
 
 // PUT => /order
-
 exports.createOrder = async (req, res, next) => {
     const price = Number(req.body.price);
     const ingredients = req.body.ingredients;

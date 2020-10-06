@@ -1,4 +1,4 @@
-const User = new require('../models/user');
+const User = require('../models/user');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const {validationResult} = require('express-validator')
@@ -36,7 +36,7 @@ exports.register = async (req, res, next) => {
     const password = req.body.password;
     const email = req.body.email;
     try {
-        const encryptedPass = await bcryptjs.hash(password, 12)
+        const encryptedPass = await bcryptjs.hash(password, 12);
         const newUser = new User({username: username, password: encryptedPass, email: email});
         await newUser.save();
         return res.status(200).json("Registered Successfully");

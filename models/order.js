@@ -1,4 +1,4 @@
-const mongoose = new require('mongoose');
+const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const orderSchema = new Schema({
@@ -18,8 +18,8 @@ const orderSchema = new Schema({
             meat: 0
         }
     },
-    customer:{
-        type:Schema.Types.ObjectId, ref:'customer'
+    customer: {
+        type: Schema.Types.ObjectId, ref: 'customer'
     }
 }, {timestamps: true})
 
