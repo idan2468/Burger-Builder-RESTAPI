@@ -8,9 +8,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd2969b-b360-471e-858c-0bbe511279bf" name="Default Changelist" comment="Adding cookie parser to the app">
+    <list default="true" id="6bd2969b-b360-471e-858c-0bbe511279bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hbELsLLQjRM1cnAnNLPEYwZP3k" />
@@ -84,7 +90,10 @@
       <workItem from="1600884069252" duration="3655000" />
       <workItem from="1600983929666" duration="4470000" />
       <workItem from="1601075752726" duration="12426000" />
-      <workItem from="1601539053403" duration="11308000" />
+      <workItem from="1601539053403" duration="11994000" />
+      <workItem from="1602020369305" duration="2420000" />
+      <workItem from="1602175613495" duration="604000" />
+      <workItem from="1602181741734" duration="3847000" />
     </task>
     <task id="LOCAL-00001" summary="Added controller, model and routes for getting ingredients from DB">
       <created>1600332697484</created>
@@ -184,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601760397525</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Format code and add typing support for mongoose and express">
+      <created>1602010276520</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602010276520</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,17 +257,22 @@
     <MESSAGE value="Added integration with the express-validator package" />
     <MESSAGE value="Adding cookie parser to the app" />
     <MESSAGE value="Add todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add todo" />
+    <MESSAGE value="Format code and add typing support for mongoose and express" />
+    <option name="LAST_COMMIT_MESSAGE" value="Format code and add typing support for mongoose and express" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="186" y="0" key="CommitChangelistDialog2" timestamp="1601760396892">
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602175525794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="186" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601760396892" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601642182518">
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1602175525794" />
+    <state x="186" y="0" key="CommitChangelistDialog2" timestamp="1602010275646">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601642182518" />
+    <state x="186" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602010275646" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602198831240">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602198831240" />
     <state x="603" y="313" key="Git.Rebase.Log.Action.NewCommitMessage.Dialog" timestamp="1601539153306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -264,22 +285,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600327505424" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601739339540">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1602198437596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601739339540" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601739339539">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602198437596" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1602198437596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601739339539" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601739339537">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602198437596" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1602198437596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601739339537" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601739339539">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602198437596" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1602198437596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601739339539" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602198437596" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1601412699726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -328,6 +349,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1601412699726" />
+    <state x="0" y="0" key="MergeDialog" timestamp="1602010335859">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1602010335859" />
+    <state x="0" y="0" key="MultipleFileMergeDialog" timestamp="1602010335878">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1602010335878" />
     <state x="647" y="133" key="RollbackChangesDialog" timestamp="1600864714395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -340,10 +369,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1600275155904" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601760405951">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602197630029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601760405951" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602197630029" />
     <state x="417" y="104" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1602009869273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
