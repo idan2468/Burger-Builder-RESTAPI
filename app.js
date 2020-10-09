@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 4000
 
 const MONGO_URI = process.env.MONGO_URI
 // Configs middlewares
-app.use(helmet);
+app.use(helmet());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
