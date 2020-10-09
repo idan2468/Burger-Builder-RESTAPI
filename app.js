@@ -4,6 +4,7 @@
 // Imports
 require('dotenv').config();
 const express = require('express');
+const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const orderRouter = require('./routes/order');
 const ingredientRouter = require('./routes/ingredient');
@@ -18,6 +19,7 @@ const PORT = process.env.PORT || 4000
 
 const MONGO_URI = process.env.MONGO_URI
 // Configs middlewares
+app.use(helmet);
 app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
