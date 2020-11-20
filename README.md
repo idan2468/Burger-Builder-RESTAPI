@@ -1,8 +1,20 @@
 # Burger-Builder-RESTAPI
 
-Built REST API to the Burger Builder react project including the following:
-  Integration with MongoDB witht the help of Mongoose.
-  Fully secured with JWT.
-  Handling of errors.
+# Introduction
+REST API to the Burger Builder project.
+Link:  https://idans-nodejs-firstapp.herokuapp.com/
+
+## Technologies
+- JWT
+- MongoDB
+- Express
+- NodeJs
+
+## Functionalities
+- Integration with MongoDB witht the help of Mongoose.
+- Fully secured with JWT.
+- CRUD operations
+- Handling of errors.
+
   
 
