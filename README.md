@@ -11,10 +11,7 @@ Link:  https://idans-nodejs-firstapp.herokuapp.com/
 - NodeJs
 
 ## Functionalities
-- Integration with MongoDB witht the help of Mongoose.
+- Integration with MongoDB with the help of Mongoose.
 - Fully secured with JWT.
 - CRUD operations
 - Handling of errors.
-
-  
-
